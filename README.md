@@ -23,7 +23,7 @@ In this arena, there’s no mercy — just you, your weapon, and the burning urg
 
 ## 🚩 Personal & Design Goals
 
-I am a big fan of multiplayer games and interested in the inner works, so together with my group we designed a fun **party game** with a big focus on playing against each other. I worked mainly on the **combat system** and **"feel"**. The player character is a little ghost that can choose between 1 of 3 weapons with different playstyle and aquires **perks** throughout the game.
+I am a big fan of multiplayer games and interested in the inner workings, so together with my group we designed a fun **party game** with a big focus on playing against each other. I worked mainly on the **combat system** and **"feel"**. The player character is a little ghost that can choose between one of three weapons with different playstyle and acquires **perks** throughout the game.
 <p align="center"> <img  width="300" 
 src="https://github.com/user-attachments/assets/b032e3d3-5e8e-4061-9e99-a73ba560d32c"/>
 </p>
@@ -31,11 +31,11 @@ src="https://github.com/user-attachments/assets/b032e3d3-5e8e-4061-9e99-a73ba560
 ### Weapons:
 <img align="right" width="150" 
 src="https://github.com/user-attachments/assets/94435c16-9ebd-43ff-b658-1b6c20964921"/>
-The weapons vary in the their **"projectile behaviour"**. The revolver is a classical hitscan weapon. The rune shotgun has **slow flying projectiles** and the thommy gun has **fast projectiles**. Each gun added new challenges, expecially because of the networking aspect of the game.
+The weapons vary in their **"projectile behavior"**. The revolver is a a classic hitscan weapon. The rune shotgun has **slow flying projectiles** and the tommy gun has **fast projectiles**. Each gun added new challenges, especially because of the networking aspects of the game.
 
 ### Perks:
 
-The perks are the main feature of the game. I made them as modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base with gives a soldi foundation and ensures that they work directly with the rest.
+The perks are the main feature of the game. They are modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base which gives a solid foundation and ensures that they work directly with the rest.
 
 
 
