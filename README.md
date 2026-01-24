@@ -3,7 +3,9 @@
 <img width="315" height="250" alt="5fLuia" src="https://github.com/user-attachments/assets/d198d121-dd8c-47f7-9cf2-51ce3458aed7"/>
 </p>
 In this arena, there’s no mercy — just you, your weapon, and the burning urge to blast your friends right off the map! Run, jump, shoot, and smash until only one player is left standing. Every hit could be the last, and every round writes a new chapter in your friendship’s downfall.
-
+</br></br>
+🎮 You can Download the Game on Itch.io:</br>
+https://s4g.itch.io/flungus-fright-club
 
 
 
