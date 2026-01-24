@@ -1,2 +1,31 @@
-# Flungus
+# 👻 Flungus 
 In this arena, there’s no mercy — just you, your weapon, and the burning urge to blast your friends right off the map! Run, jump, shoot, and smash until only one player is left standing. Every hit could be the last, and every round writes a new chapter in your friendship’s downfall.
+
+
+## Skills & Software
+- `Unity 6`
+- `C#`
+- `Unity Shader Graph`
+- `Houdini`
+
+## Key Aspects
+- **Modular Combat System** with **Perks** that add new abilities to the player
+- Split between **Visuals** and **Logic**
+- **Asset Database** for handling the visuals for different players
+- **VFX/Object Pooling** for performance
+
+
+## Personal & Design Goals
+I am a big fan of multiplayer games and interested in the inner works, so together with my group we designed a fun **party game** with a big focus on playing against each other. I worked mainly on the **combat system** and **"feel"**. The player character is a little ghost that can choose between 1 of 3 weapons with different playstyle and aquires **perks** throughout the game.
+
+The weapons vary in the their **"projectile behaviour"**. The revolver is a classical hitscan weapon. The rune shotgun has **slow flying projectiles** and the thommy gun has **fast projectiles**. Each gun added new challenges, expecially because of the networking aspect of the game.
+
+The perks are the main feature of the game. I made them as modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base with gives a soldi foundation and ensures that they work directly with the rest.
+
+When not working on combat I was prototyping some Houdini assets to help with the level pipeline, but in the end it didn't make it in the final game. 
+<img src="https://github.com/user-attachments/assets/444a98f9-fd5f-4e59-8c52-8e6359682322" width="450" height="250">
+
+***
+## Trailer
+https://github.com/user-attachments/assets/d373cbcb-f552-475d-91f6-b12277eac08a
+
