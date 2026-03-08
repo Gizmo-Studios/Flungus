@@ -35,6 +35,9 @@ src="https://github.com/user-attachments/assets/b032e3d3-5e8e-4061-9e99-a73ba560
 src="https://github.com/user-attachments/assets/94435c16-9ebd-43ff-b658-1b6c20964921"/>
 The weapons vary in their **"projectile behavior"**. The revolver is a a classic hitscan weapon. The rune shotgun has **slow flying projectiles** and the tommy gun has **fast projectiles**. Each gun added new challenges, especially because of the networking aspects of the game.
 
+Code for the handling of the gun. It constrains the weapon to our character and handles the Hit-Scan part of the weapon. Projectiles are handled by the Server.
+https://github.com/Gizmo-Studios/Flungus/blob/main/Flungus/Combat/CombatActionHandler.cs
+
 ### Perks:
 
 The perks are the main feature of the game. They are modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base which gives a solid foundation and ensures that they work directly with the rest.
