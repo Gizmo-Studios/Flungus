@@ -40,7 +40,7 @@ https://github.com/Gizmo-Studios/Flungus/blob/main/Flungus/Combat/CombatActionHa
 
 ### Perks:
 
-The perks are the main feature of the game. They are modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base which gives a solid foundation and ensures that they work directly with the rest.
+The perks are the main feature of the game. They are modular, so our designers can combine them and tweak values on the fly. Furthermore new perks are created with a perk base which gives a solid foundation and ensures that they work directly with the rest. Here is the simple base for the Perks: https://github.com/Gizmo-Studios/Flungus/blob/main/Flungus/Combat/SOProjectilePerk.cs
 
 
 
