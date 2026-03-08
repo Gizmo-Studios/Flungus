@@ -21,11 +21,13 @@ namespace Team3.Combat
         private GameObject serverBulletPrefab;
         [SerializeField]
         private GameObject clientBulletPrefab;
-
         private GameObject serverBulletTemplate;
         private GameObject clientBulletTemplate;
-        [SerializeField] private AudioSource audio;
-        [SerializeField] private CameraShake shake;
+        
+        [SerializeField] 
+        private AudioSource audio;
+        [SerializeField] 
+        private CameraShake shake;
         [SerializeField]
         private PlayerStats playerStats;
         [SerializeField]
@@ -42,27 +44,33 @@ namespace Team3.Combat
         private DamageType skillDamageType;
         [SerializeField]
         private List<SOProjectilePerk> onShootPerks = new List<SOProjectilePerk>();
-        public SOGun RuntimeGun => PerkDatabase.Instance.GetGunByID(gunID.Value);
-        private bool isReady = false;
-
         [SerializeField]
-        private uint bulletVersion = 420;
-
-        private bool allowInvoke = true;
-        private bool isAttackPressed = false;
-        private int bulletsPerClick = 1;
-
-        [SerializeField] private BulletTraces bulletTraceObject;
+        [SerializeField] 
+        private BulletTraces bulletTraceObject;
         private IObjectPool<BulletTraces> bulletTracePool;
+        [SerializeField] 
+        private int defaultCapacity = 20;
+        [SerializeField]
+        private int maxCapacity = 50;
 
-        [SerializeField] private int defaultCapacity = 20;
-        [SerializeField] private int maxCapacity = 50;
-
-        [SerializeField] private MuzzleFlash muzzleFlashObject;
+        [SerializeField] 
+        private MuzzleFlash muzzleFlashObject;
         private IObjectPool<MuzzleFlash> muzzleFlashPool;
 
         [SerializeField] private MuzzleFlash impactFlashObject;
         private IObjectPool<MuzzleFlash> impactFlashPool;
+        private uint bulletVersion = 420;
+        private bool allowInvoke = true;
+        private bool isAttackPressed = false;
+        private int bulletsPerClick = 1;
+        private bool isReady = false;
+       
+        public SOGun RuntimeGun => PerkDatabase.Instance.GetGunByID(gunID.Value);
+       
+
+      
+
+        
 
         // #################  WEAPON STUFF  #######################
         private WeaponState weaponState = WeaponState.Ready;
@@ -136,9 +144,7 @@ namespace Team3.Combat
             children.ForEach(c => c.layer = 13);
 
             weaponAnimation = gunPrefab.GetComponentInChildren<Animation>();
-            //Debug.LogError(weaponAnimation);
-            //weaponAnimation.AddClip(RuntimeGun.ShootAnimation, "Shoot");
-           //weaponAnimation.AddClip(RuntimeGun.ReloadAnimation, "Reload");
+
         }
 
 
@@ -215,7 +221,6 @@ namespace Team3.Combat
                 {
                     weaponState = WeaponState.Reloading;
 
-                    //weaponAnimation.Play("Reload");
                     CancelInvoke("ReloadFinished");
                     Invoke("ReloadFinished", RuntimeGun.ReloadTime);
                 }
@@ -250,7 +255,6 @@ namespace Team3.Combat
                 {
 
                     weaponState = WeaponState.Reloading;
-                    //weaponAnimation.Play("Reload");
                     CancelInvoke("ReloadFinished");
                     Invoke("ReloadFinished", RuntimeGun.ReloadTime);
                 }
@@ -318,7 +322,7 @@ namespace Team3.Combat
             if (hitRef.TryGet(out NetworkObject hitObject))
             {
                 Debug.LogError("hello");
-                // Now try to get the component from the resolved object
+               
                 if (hitObject.TryGetComponent<EnemyStats>(out var stats)) { 
                 }
                 else { 
@@ -332,8 +336,7 @@ namespace Team3.Combat
 
         public void Shooting()
         {
-            //Shoot Animation
-            //weaponAnimation.Play("Shoot");
+            
 
 
             var ownerStats = PlayerRegistry.GetStats(OwnerClientId);
@@ -442,7 +445,7 @@ namespace Team3.Combat
             }
             else
             {
-                targetPoint = ray.GetPoint(100); // Default far point
+                targetPoint = ray.GetPoint(100);
             }
 
      
@@ -516,13 +519,13 @@ namespace Team3.Combat
             }
             else
             {
-                targetPoint = ray.GetPoint(100); // Default far point
+                targetPoint = ray.GetPoint(100); 
             }
 
-            // Calculate the target direction from the weaponSocket to the target point
+            
             Vector3 targetDirection = (targetPoint - weaponSocket.transform.position).normalized;
 
-            // Smoothly rotate towards the target direction using Slerp
+            
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             weaponSocket.transform.rotation = Quaternion.Slerp(weaponSocket.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
         }
@@ -587,3 +590,4 @@ namespace Team3.Combat
         }
     }
 }
+
